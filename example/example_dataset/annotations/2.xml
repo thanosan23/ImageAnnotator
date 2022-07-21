@@ -1,0 +1,9 @@
+<annotation>
+  <bndbox>
+    <x>446</x>
+    <y>317</y>
+    <width>998</width>
+    <height>619</height>
+    <label>Tree</label>
+  </bndbox>
+</annotation>

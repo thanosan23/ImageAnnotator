@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Annotator</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='client/main.css') }}">
+  </head>
+  <body> 
+    <button id="save_btn">Save</button>
+    <button id="prev_btn">Prev</button>
+    <button id="next_btn">Next</button>
+    <button id="clear_btn">Clear</button>
+    <button id="undo_btn">Undo</button>
+    <select id = "label" >  
+      <option>None</option>
+    </select>  
+    <input id="option_text_box" type="text" placeholder="New Label">
+    <button id="add_option">Insert Label</button>
+    <button id="remove_option">Remove Selected Label</button>
+    <div id="canvasWrapper" class="clearfix">
+      <canvas id="canvas"></canvas>
+      <canvas id="rects"></canvas>
+      <canvas id="overlay"></canvas>
+    </div>
+
+  </body>
+  <script src="{{ url_for('static',filename='client/main.js') }}"> </script>
+</html>
