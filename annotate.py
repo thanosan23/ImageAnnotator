@@ -117,7 +117,8 @@ def main():
     prod = int(os.getenv("PROD", '1'))
     assert os.path.isdir(
         args.folder), f"Folder \"{args.folder}\" doesn't exist!"
-
+    if args.folder[-1] == '/':
+      args.folder = args.folder[:-1]
     dir, _ = os.path.split(args.folder)
     if not os.path.isdir(os.path.join(dir, "annotations")):
         os.mkdir(os.path.join(dir, "annotations"))
@@ -138,7 +139,6 @@ def main():
             app.run(host=args.host, port=args.port, debug=True)
     except KeyboardInterrupt:
         sys.exit(0)
-
 
 if __name__ == "__main__":
     main()
